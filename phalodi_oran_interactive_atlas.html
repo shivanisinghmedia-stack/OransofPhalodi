@@ -2,6 +2,22 @@
 <h2 class="sr-only">Interactive Oran Atlas for Phalodi District — search, filter and click 150 Orans to view details</h2>
 
 <style>
+/* KRAPAVIS header styles */
+.site-header{padding:0.5rem 0; background:transparent;}
+.site-header-inner{max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;text-decoration:none;color:inherit}
+.k-logo{height:56px;width:auto;display:block;border-radius:4px;flex-shrink:0}
+.brand-text{display:flex;flex-direction:column;line-height:1}
+.brand-title{font-size:16px;font-weight:700;color:var(--text-primary);} 
+.brand-acronym{font-weight:600;color:var(--bg-success);margin-left:6px;font-size:0.95em}
+.brand-sub{font-size:12px;color:var(--text-secondary);margin-top:2px}
+
+@media (max-width:640px){
+  .k-logo{height:44px}
+  .brand-title{font-size:14px}
+  .brand-sub{font-size:11px}
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
 .wrap{padding:1rem 0;font-family:var(--font-sans)}
 .top-bar{background:var(--surface-1);border:0.5px solid var(--border);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1rem}
@@ -15,7 +31,7 @@
 .stat{background:var(--surface-1);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;text-align:center}
 .stat-n{font-size:20px;font-weight:500;color:var(--text-primary)}
 .stat-l{font-size:11px;color:var(--text-secondary);margin-top:2px}
-.list-header{display:grid;grid-template-columns:36px 1fr 110px 90px;gap:8px;padding:6px 12px;background:var(--surface-1);border:0.5px solid var(--border);border-radius:var(--radius) var(--radius) 0 0;font-size:11px;font-weight:500;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.04em}
+.list-header{display:grid;grid-template-columns:36px 1fr 110px 90px;gap:8px;padding:6px 12px;background:var(--surface-1);border:0.5px solid var(--border);border-radius:var(--radius) var(--radius) var(--radius) var(--radius);}
 .list-wrap{border:0.5px solid var(--border);border-top:none;border-radius:0 0 var(--radius) var(--radius);max-height:320px;overflow-y:auto}
 .oran-row{display:grid;grid-template-columns:36px 1fr 110px 90px;gap:8px;padding:8px 12px;border-bottom:0.5px solid var(--border);cursor:pointer;transition:background .12s;align-items:center}
 .oran-row:last-child{border-bottom:none}
@@ -43,6 +59,19 @@
 </style>
 
 <div class="wrap">
+
+<header class="site-header" role="banner">
+  <div class="site-header-inner">
+    <a href="./" class="brand">
+      <img src="assets/krapavis_logo.svg" alt="KRAPAVIS logo" class="k-logo">
+      <div class="brand-text">
+        <div class="brand-title">Krishi Avam Paristhitiki Vikas Sansthan <span class="brand-acronym">(KRAPAVIS)</span></div>
+        <div class="brand-sub">Phalodi Oran Interactive Atlas</div>
+      </div>
+    </a>
+  </div>
+</header>
+
 <div class="top-bar">
   <div class="top-title"><i class="ti ti-map-2" aria-hidden="true"></i> Phalodi Oran Atlas</div>
   <div class="top-sub">150 sacred Oran groves · 8 Tehsils · Phalodi District, Rajasthan · KRAPAVIS Field Survey</div>
@@ -193,186 +222,4 @@ const orans=[
 [111,"Palli-Pratham","Lohawat","Bhomiyaji Oran",456.94],
 [112,"Palli Dwitiy","Lohawat","Ratan Singh Bhomiyaji Oran",148.69],
 [113,"Paschimi Dhani","Lohawat","Pabuji Oran",66.22],
-[114,"Peethasar","Bapini","Nimbali Nadi Oran",261.54],
-[115,"Puniyon Ki Dhani","Lohawat","Rupnathji Oran",25.88],
-[116,"Radiya Bera","Lohawat","Ramdevji Oran",139.42],
-[117,"Raghunathpura","Aau","Pabuji Oran",7.29],
-[118,"Ram Nagar","Dechu","Chhataradi Oran",32.91],
-[119,"Ramdev Nagar","Dechu","Haraji Baba Oran - Sati Mata Oran",41.54],
-[120,"Ramdev Nagar","Lohawat","Ramdevji - Bhomiyaji - Gogaji Oran",71.26],
-[121,"Ramnagar Denok","Aau","Gogaji Oran",7.87],
-[122,"Rawra","Bap","Jujhar Jethamalji Oran",172.67],
-[123,"Rayra","Phalodi","Gungiya Mata Oran",88.22],
-[124,"Sagara","Dechu","Pabuji Oran",114.80],
-[125,"Santok Nagar","Bapini","Pabuji Oran",58.76],
-[126,"Sanwata","Bapini","Mehoji Oran",18.27],
-[127,"Sarswati Nagar","Bapini","Dhudiyo Ki Nadi Oran",16.49],
-[128,"Setrawa","Setrawa","Pabuji Oran",12.29],
-[129,"Shaitan Singh Nagar","Lohawat","Aai Mata Oran",161.23],
-[130,"Shripabusar","Phalodi","Pabuji Oran",110.00],
-[131,"Sidrupavato Ki Dhani","Lohawat","Sati Mata Oran",21.08],
-[132,"Sihra","Bap","Aainath Mata Oran",551.50],
-[133,"Singdasar","Lohawat","Sundlainadi Oran",16.25],
-[134,"Sodadara","Bap","Jambheshwarji Oran",24.02],
-[135,"Sodho Ka Mandala","Dechu","Sodsar Oran",397.82],
-[136,"Sri Krashnanagar","Aau","Doliya Bhomiyaji Oran",186.41],
-[137,"Suwap","Aau","Jog Mata Oran",15.44],
-[138,"Swamiji Ki Dhani","Lohawat","Simrath Bharatiji Oran",49.47],
-[139,"Tanot Basti","Bap","Tanot Mata Oran",280.00],
-[140,"Tekra","Bap","Aai Mata Oran",858.12],
-[141,"Tikaram Paliwal Nagar","Lohawat","Pabuji Oran",166.34],
-[142,"Udainagar","Aau","Ramdevji Oran",96.82],
-[143,"Udat","Ghantiyali","Nakhat Bana Oran",361.44],
-[144,"Ugras","Phalodi","Nagnechiya Mata Oran",224.14],
-[145,"Unawara","Bapini","Karkada Babosa Oran",53.41],
-[146,"Viramdevgarh","Setrawa","Naganaray Mata Oran",327.66],
-[147,"Vishnoi Chak","Phalodi","Jambheshwarji Oran",8.40],
-[148,"Vishnu Nagar","Lohawat","Jambheshwarji Oran",24.91],
-[149,"Vishwakarma Nagar","Phalodi","Laxmidas Bomiyaji Oran",39.92],
-[150,"Vishwakarma Nagar","Bapini","Rupelav Oran",647.25],
-];
-
-const tehsilColors={
-  Aau:{bg:"#dbeafe",text:"#1e40af"},
-  Bap:{bg:"#dcfce7",text:"#166534"},
-  Bapini:{bg:"#fef9c3",text:"#854d0e"},
-  Dechu:{bg:"#fce7f3",text:"#9d174d"},
-  Ghantiyali:{bg:"#f3e8ff",text:"#6b21a8"},
-  Lohawat:{bg:"#ccfbf1",text:"#134e4a"},
-  Phalodi:{bg:"#fee2e2",text:"#991b1b"},
-  Setrawa:{bg:"#ecfccb",text:"#3f6212"},
-};
-
-const tehsils=[...new Set(orans.map(o=>o[2]))].sort();
-const sel=document.getElementById('tehsilFilter');
-tehsils.forEach(t=>{const op=document.createElement('option');op.value=t;op.textContent=t;sel.appendChild(op);});
-
-let filtered=orans, selected=null;
-
-function sizeLabel(a){
-  if(a<50)return'Small';
-  if(a<200)return'Medium';
-  if(a<500)return'Large';
-  return'Very large';
-}
-
-function render(){
-  const lw=document.getElementById('listWrap');
-  const totalArea=filtered.reduce((s,o)=>s+o[4],0);
-  const uniqueTehsils=new Set(filtered.map(o=>o[2])).size;
-  document.getElementById('sShowing').textContent=filtered.length;
-  document.getElementById('sArea').textContent=totalArea>=1000?Math.round(totalArea/100)/10+'K':Math.round(totalArea);
-  document.getElementById('sTehsil').textContent=uniqueTehsils;
-
-  if(!filtered.length){
-    lw.innerHTML='<div class="empty"><i class="ti ti-mood-sad" aria-hidden="true" style="font-size:24px;display:block;margin-bottom:8px"></i>No Orans match your search</div>';
-    return;
-  }
-  lw.innerHTML=filtered.map(o=>{
-    const tc=tehsilColors[o[2]]||{bg:'#f1f5f9',text:'#334155'};
-    const isActive=selected&&selected[0]===o[0];
-    return`<div class="oran-row${isActive?' active':''}" data-id="${o[0]}" role="button" tabindex="0" aria-label="${o[1]}, ${o[2]}, ${o[3]}, ${o[4]} hectares">
-      <span class="row-no">${o[0]}</span>
-      <div>
-        <div class="row-name">${o[1]}</div>
-        <div style="font-size:11px;color:var(--text-muted);margin-top:1px">${o[3]}</div>
-      </div>
-      <div><span class="tehsil-badge" style="background:${tc.bg};color:${tc.text}">${o[2]}</span></div>
-      <div class="row-area">${o[4].toFixed(2)}</div>
-    </div>`;
-  }).join('');
-
-  lw.querySelectorAll('.oran-row').forEach(row=>{
-    row.addEventListener('click',()=>selectOran(parseInt(row.dataset.id)));
-    row.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')selectOran(parseInt(row.dataset.id));});
-  });
-}
-
-function selectOran(id){
-  selected=orans.find(o=>o[0]===id);
-  render();
-  renderDetail();
-  document.getElementById('detailArea').scrollIntoView({behavior:'smooth',block:'nearest'});
-}
-
-function sizeCategory(a){
-  if(a<50)return{label:'Small grove',icon:'ti-seedling'};
-  if(a<200)return{label:'Medium grove',icon:'ti-trees'};
-  if(a<500)return{label:'Large grove',icon:'ti-forest'};
-  return{label:'Very large grove',icon:'ti-mountain'};
-}
-
-function renderDetail(){
-  const da=document.getElementById('detailArea');
-  if(!selected){
-    da.innerHTML='<div class="no-sel"><i class="ti ti-hand-click" aria-hidden="true" style="font-size:20px;display:block;margin-bottom:6px"></i>Click any row above to see full details</div>';
-    return;
-  }
-  const [no,village,tehsil,oranName,area]=selected;
-  const tc=tehsilColors[tehsil]||{bg:'#f1f5f9',text:'#334155'};
-  const {label:sizeLabel2,icon}=sizeCategory(area);
-  const allInTehsil=orans.filter(o=>o[2]===tehsil);
-  const totalTehsilArea=allInTehsil.reduce((s,o)=>s+o[4],0);
-  const pct=((area/totalTehsilArea)*100).toFixed(1);
-  const rankInTehsil=[...allInTehsil].sort((a,b)=>b[4]-a[4]).findIndex(o=>o[0]===no)+1;
-
-  da.innerHTML=`<div class="detail-card">
-    <div class="detail-header">
-      <div class="detail-icon"><i class="ti ${icon}" aria-hidden="true"></i></div>
-      <div>
-        <div class="detail-title">${village}</div>
-        <div class="detail-sub">${oranName}</div>
-      </div>
-    </div>
-    <div class="detail-grid">
-      <div class="detail-field">
-        <div class="field-label">Tehsil</div>
-        <div class="field-value"><span class="tehsil-badge" style="background:${tc.bg};color:${tc.text}">${tehsil}</span></div>
-      </div>
-      <div class="detail-field">
-        <div class="field-label">Serial No.</div>
-        <div class="field-value">#${no}</div>
-      </div>
-      <div class="detail-field">
-        <div class="field-label">Area</div>
-        <div class="field-value big">${area.toFixed(2)} ha</div>
-      </div>
-      <div class="detail-field">
-        <div class="field-label">Size category</div>
-        <div class="field-value">${sizeLabel2}</div>
-      </div>
-      <div class="detail-field">
-        <div class="field-label">Rank in ${tehsil} Tehsil</div>
-        <div class="field-value">#${rankInTehsil} of ${allInTehsil.length}</div>
-      </div>
-      <div class="detail-field">
-        <div class="field-label">% of Tehsil area</div>
-        <div class="field-value">${pct}%</div>
-      </div>
-    </div>
-    <div style="margin-top:10px">
-      <button onclick="sendPrompt('Tell me more about ${oranName} in ${village}, ${tehsil} Tehsil, Phalodi district')">Ask about this Oran ↗</button>
-    </div>
-  </div>`;
-}
-
-function applyFilters(){
-  const q=document.getElementById('search').value.toLowerCase().trim();
-  const t=document.getElementById('tehsilFilter').value;
-  const a=document.getElementById('areaFilter').value;
-  filtered=orans.filter(o=>{
-    const matchQ=!q||(o[1].toLowerCase().includes(q)||o[2].toLowerCase().includes(q)||o[3].toLowerCase().includes(q));
-    const matchT=!t||o[2]===t;
-    const matchA=!a||(a==='0-50'&&o[4]<50)||(a==='50-200'&&o[4]>=50&&o[4]<200)||(a==='200-500'&&o[4]>=200&&o[4]<500)||(a==='500+'&&o[4]>=500);
-    return matchQ&&matchT&&matchA;
-  });
-  render();
-}
-
-document.getElementById('search').addEventListener('input',applyFilters);
-document.getElementById('tehsilFilter').addEventListener('change',applyFilters);
-document.getElementById('areaFilter').addEventListener('change',applyFilters);
-
-render();
-renderDetail();
-</script>
+[114,"Peethasar","Bapini","Nimbi...
